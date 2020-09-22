@@ -1,0 +1,155 @@
+body {
+    background-color: rgb(233, 229, 229);
+}
+.balk {
+    display: inline-block;
+}
+h3 {
+    margin-top: 14px;
+    margin-left: 18px;
+    float: left;
+    color: white;
+    font-size: 12px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+h4 {
+    margin-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    float: right;
+    color: white;
+    border-radius: 4px;
+    font-size: 11px;
+    transition-property: background-color;
+    transition-duration: 500ms;
+    background-color: rgb(74, 243, 74);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.boven {
+    display: inline-block;
+    background-color: white;
+    margin-top: 10px;
+    margin-bottom: 8px;
+
+    
+}
+h6 {
+    margin-top: 50px;
+    float: right;
+    color: rgb(80, 163, 156);
+    margin-right: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h5 {
+    margin-left: 10px;
+    margin-top: 0px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+p {
+    margin-left: 10px;
+    font-size: 12px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+}
+header {
+    background-color: black;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    padding: 1px 1px;
+    grid-row: 1 / 1;
+    grid-column: 1 / 1;
+    top: 0px;
+    left: 0px;
+
+
+  }
+.Tweet {
+    background-color: white;
+    text-align: left;
+    border: 1px rgb(233, 229, 229) solid;
+    
+}
+.grid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(8, 1fr 1fr);
+    
+
+}
+.a {
+    grid-row: 1 / 2;
+    grid-column: 5 / 20;
+    margin-top: 36px;
+}
+.b {
+    grid-row: 2 / 3;
+    grid-column: 5 / 20;
+}
+.c {
+    grid-row: 3 / 4;
+    grid-column: 5 / 20;
+}
+.d {
+    grid-row: 4 / 5;
+    grid-column: 5 / 20;
+}
+.e {
+    grid-row: 5 / 6;
+    grid-column: 5 / 20;
+}
+.f {
+    grid-row: 6 / 7;
+    grid-column: 5 / 20;
+}
+.g {
+    grid-row: 7 / 8;
+    grid-column: 5 / 20;
+}
+
+.beschrijving {
+    grid-row: 1 / 4;
+    grid-column: 1 / 5;
+    text-align: center;
+    border-bottom: 1px rgb(173, 171, 171) solid;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-left: 18px;
+    margin-right: 20px;
+    margin-bottom: 40px;
+
+}
+h2 {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 15px;
+    margin-top: 10px;
+}
+.volgers {
+    grid-row: 3 / 4;
+    grid-column: 1 / 5;
+    text-align: left;
+}
+h4:hover {
+    background-color: greenyellow;
+}
+.fa-heart:hover {
+    color: red
+}
+.fa-retweet:hover {
+    color: rgb(97, 186, 238)
+}
+.fa-heart {
+    transition-duration: 300ms;
+}
+.fa-retweet {
+    transition-duration: 300ms;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+img {
+    border-radius: 50%;
+}
