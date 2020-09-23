@@ -72,8 +72,14 @@ header {
     background-color: white;
     text-align: left;
     border: 1px rgb(233, 229, 229) solid;
-    
+    display: flex;  
 }
+
+.avatar-location {
+    display: flex;
+    align-items: center;
+}
+
 .grid {
     display: grid;
     width: 100%;
@@ -144,12 +150,19 @@ h4:hover {
 }
 .fa-heart {
     transition-duration: 300ms;
+    margin-left: 10px;
 }
 .fa-retweet {
     transition-duration: 300ms;
     margin-left: 10px;
-    margin-top: 5px;
+    margin-top: 1px;
 }
 img {
     border-radius: 50%;
 }
+
+.avatar-location {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
