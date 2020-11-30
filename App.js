@@ -17,7 +17,7 @@ function Todo({ todo, index, completeTodo }) {
 
 
 function TodoForm(props) {
-  const [toDoText, setValue] = useState("");
+  const [toDoText, setValue, setTodos] = useState("");
 
   const addTodo = text => {
     const newTodos = [...props.todos, { text }];
@@ -65,10 +65,11 @@ function App() {
             completeTodo={completeTodo}
           />
        ))}
-       <TodoForm  todo={todo} />
+       <TodoForm  todos={todos} />
      </div>
    </div>
   );
 }
 
 export default App;
+
