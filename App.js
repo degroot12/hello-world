@@ -16,12 +16,17 @@ function Todo({ todo, index, completeTodo }) {
 };
 
 
-function TodoForm(props) {
-  const [toDoText, setValue, setTodos] = useState("");
+function TodoForm({ todos, setTodos }) {
+  const [toDoText, setToDoText] = useState("");
 
   const addTodo = text => {
-    const newTodos = [...props.todos, { text }];
+    const newTodo = {
+      text,
+      isCompleted: false
+    }
+    const newTodos = [...todos, newTodo];
     setTodos(newTodos);
+    setToDoText("");
   }
 
 
@@ -31,7 +36,7 @@ function TodoForm(props) {
           type="text"
           className="input"
           value={toDoText}
-          onChange={e => setValue(e.target.value)}
+          onChange={e => setToDoText(e.target.value)}
         />
       <div>
         <button onClick={() => addTodo(toDoText)}>Toevoegen</button>
@@ -65,11 +70,11 @@ function App() {
             completeTodo={completeTodo}
           />
        ))}
-       <TodoForm  todos={todos} />
+       <TodoForm  todos={todos}
+                  setTodos={setTodos} />
      </div>
    </div>
   );
 }
 
 export default App;
-
