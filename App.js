@@ -2,16 +2,20 @@ import React, { useState } from 'react';
 import './App.css';
 
 function Todo({ todo, index, completeTodo }) {
+  
   return (
-    <div 
-      className="todo"
-      style={{ textDecoration: todo.isCompleted ? "line-through" : ""}}
-    >
-      <div>
-        <input type="checkbox" onClick={() => completeTodo(index)} checked={todo.isCompleted} />
+      <div 
+        className="todo"
+        style={{ textDecoration: todo.isCompleted ? "line-through" : ""}}
+      >
+        <div>
+          <input type="checkbox" onClick={() => completeTodo(index)} checked={todo.isCompleted} />
+        </div>
+        {todo.text}
       </div>
-      {todo.text}
-    </div>
+
+        
+
   );
 };
 
@@ -30,7 +34,8 @@ function TodoForm({ todos, setTodos }) {
   }
 
 
-  return (
+
+  return ( 
     <div className="buttonAdd">
         <input
           type="text"
@@ -54,11 +59,21 @@ function App() {
     setTodos(newTodos);
   }
 
-  // const toggleAlphabet = () => {
-  //   const listAlphabet = { ...props.Todo };
-  //   Todo.sort((a, b) => )
-  // }
+  const toggleAlphabet = () => {
+    let listAlphabet = [...todos];
+      listAlphabet.sort((a, b) => {
+        if(a < b) {
+          return -1;
+        }
+        if(a > b) {
+          return 1;
+        }
+        return 0; 
+      })
+      setTodos(listAlphabet)    
+  }
 
+ 
   return (
    <div className="app">
      <div className="todo-list">
@@ -73,6 +88,9 @@ function App() {
        <TodoForm  todos={todos}
                   setTodos={setTodos} />
      </div>
+     <div>
+        <button onClick={toggleAlphabet}>Sort</button>
+      </div>
    </div>
   );
 }
