@@ -1,12 +1,11 @@
-const passWords = 
+const fs = require('fs');
 
-`1-3 a: abcde
-1-3 b: cdefg
-2-9 c: ccccccccc`
+const passWords = fs.readFileSync('Day2.txt', 'utf8')
 
 const splitPass = passWords.split("\n");
 
 
+let passCount = 0;
 
 splitPass.forEach(row => {
     const splitSplitPass = row.split(" ");
@@ -26,10 +25,11 @@ splitPass.forEach(row => {
     }
 
     if(count >= minMax[0] && count <= minMax[1]) {
-        console.log(passWord)
+        passCount++;
     }
-
+    
 });
+console.log(passCount)
 
 
 
